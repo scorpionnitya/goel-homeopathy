@@ -6,6 +6,8 @@ import Medicines from "./pages/Medicines";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
+import Appointment from "./pages/Appointment";
+
 
 const navLink = {
   color: "white",
@@ -14,6 +16,8 @@ const navLink = {
   padding: "6px 12px",
   borderRadius: "6px",
   background: "rgba(255,255,255,0.15)"
+  
+
 };
 
 function App() {
@@ -53,6 +57,8 @@ function App() {
           <Link style={navLink} to="/cart">Cart ({cart.length})</Link>
           <Link style={navLink} to="/about">About</Link>
           <Link style={navLink} to="/contact">Contact</Link>
+          <Link style={navLink} to="/appointment">Book Appointment</Link>
+
         </nav>
 
         {/* ROUTES */}
@@ -62,6 +68,8 @@ function App() {
           <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/appointment" element={<Appointment />} />
+
         </Routes>
 
       </div>
